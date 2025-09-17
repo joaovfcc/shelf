@@ -1,6 +1,6 @@
 package com.soloproject.shelf.model.controllers;
 
-import com.soloproject.shelf.model.entitites.Game;
+import com.soloproject.shelf.model.entities.Game;
 import com.soloproject.shelf.model.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

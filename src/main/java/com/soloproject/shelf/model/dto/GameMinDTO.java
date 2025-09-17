@@ -1,7 +1,6 @@
 package com.soloproject.shelf.model.dto;
 
-import com.soloproject.shelf.model.entitites.Game;
-import jakarta.persistence.Column;
+import com.soloproject.shelf.model.entities.Game;
 
 public class GameMinDTO {
 

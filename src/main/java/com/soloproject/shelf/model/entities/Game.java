@@ -1,4 +1,4 @@
-package com.soloproject.shelf.model.entitites;
+package com.soloproject.shelf.model.entities;
 
 import jakarta.persistence.*;
 
@@ -10,7 +10,7 @@ public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
     private String title;
     @Column(name = "game_year")
     private Integer year;
@@ -26,8 +26,8 @@ public class Game {
     public Game() {
     }
 
-    public Game(Long ID, String title, Integer year, String genre, String platforms, Double score, String imageUrl, String shortDescription, String longDescription) {
-        this.ID = ID;
+    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imageUrl, String shortDescription, String longDescription) {
+        this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
@@ -39,11 +39,11 @@ public class Game {
     }
 
     public Long getID() {
-        return ID;
+        return id;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setID(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -114,11 +114,11 @@ public class Game {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return Objects.equals(ID, game.ID);
+        return Objects.equals(id, game.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(ID);
+        return Objects.hashCode(id);
     }
 }
