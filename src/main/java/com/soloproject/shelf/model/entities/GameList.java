@@ -1,14 +1,17 @@
 package com.soloproject.shelf.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.web.WebProperties;
+
 
 import java.util.Objects;
 
 @Entity
+@Table(name = "tb_game_list")
 public class GameList {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
